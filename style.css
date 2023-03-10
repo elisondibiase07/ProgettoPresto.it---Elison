@@ -100,6 +100,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     height: 200px;
+    position: relative;
     
   }
 
@@ -141,11 +142,55 @@ body{
     
   }
 
+  /* Section Cards */
+
+.card{
+ 
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.692);
+  top: -70px;
+  display: flex;
+  align-items: center;
+}
+.img-card{
+  border-radius: 100%;
+  width: 500px;
+  height: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   @media screen and (max-width : 1000px){
 
     .navbar{
       height: 400px;
+      position: static;
   
        
      }
@@ -155,6 +200,8 @@ body{
       box-shadow: 0px 0px 0px var(--black), 0px 0px 0px var(--black);
       transform: scale(1.1);
     }
+
+    
 
     .h1-header{
       
@@ -179,16 +226,49 @@ body{
      
     height: 50px;
     width: 200px;
-   
-      
-      
   
     }
 
-
+    .card{
+ 
+     
+      top: -50px;
+     
+    }
+    .img-card{
+      
+      width: 300px;
+      height: 200px;
+    }
 
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -240,19 +320,7 @@ body{
         font-size: 40px;   
     }
      
-    .div-btn-header1{
-
-    padding: 10px ;
-   
-          
-    }
-
-    .div-btn-header2{
-
-      padding: 10px; 
-            
-    }
-  
+    
     .btn-cust-header1, .btn-cust-header2{
      
       height: 50px;
