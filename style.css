@@ -163,13 +163,30 @@ body{
 .numero{
 
   font-size: 100px;
+  transition: 0.5s;
+  cursor: pointer;
+
+}
+
+.numero:hover{
+  font-size: 150px;
+  color: var(--black);
+
+
 
 }
 
 .img-rist{
 height: 400px;
 border-radius: 100px;
+transition: 0.5s;
 
+}
+
+.img-rist:hover{
+  transform: scale(1.4);
+  margin-left: 140px;
+  margin-top: 10px;
 }
 
 
