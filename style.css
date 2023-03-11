@@ -18,7 +18,7 @@ body{
  }
 
  .bg-gold{
-  background-color: var(--gold);
+  background-color: rgba(229, 217, 109, 0.381);
 
  }
  
@@ -28,6 +28,10 @@ body{
 
  .bg-black{
   background-color: var(--black);
+ }
+
+ .bg-black1{
+  background-color: rgba(20, 19, 19, 0.349) ;  
  }
 
  .text-vanilla{
@@ -52,7 +56,6 @@ body{
 
   .logo{
     width: 100px;
-    margin-left: 50px;
     transition: 0.5s;
   }
 
@@ -86,7 +89,7 @@ body{
 
  .navbar{
     height: 120px;
-    background-color: rgba(20, 19, 19, 0.349) ;       
+         
  }
 
 
@@ -198,7 +201,87 @@ transition: 0.5s;
 
 }
 
+/* Swiper */
 
+.swiper{
+  height: 600px;
+}
+
+.card-slider{
+  height:300px;
+  width: 600px;
+  border: 7px solid var(--gold);
+  color: var(--vanilla);
+  border-radius: 20px;
+  background-image: url(./media/569e5000a60d6657d58a9f8b5f12d4ea.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+
+.card-slider:hover{
+  transform: scale(1.3);
+}
+.card-slider1{
+ 
+  background-image: url(./media/569e5000a60d6657d58a9f8b5f12d4ea.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+  
+}
+
+.card-slider2{
+ 
+  background-image: url(./media/aaaaa20.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+  
+}
+
+.card-slider3{
+ 
+  background-image: url(./media/download.jfif);
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+  
+}
+
+.card-slider4{
+ 
+  background-image: url(./media/primo-scampi-piatto-corsi-cuoco.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+  
+}
+
+.swiper-container{
+  background-image: linear-gradient( rgba(26, 28, 29, 0.708), rgba(26, 24, 24, 0) ),url(./media/istockphoto-963907744-170667a.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+.swiper-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-icon{
+  height: 40px;
+  
+  }
+
+  .icon-star{
+    
+    color: var(--gold);
+  }
 
 
 

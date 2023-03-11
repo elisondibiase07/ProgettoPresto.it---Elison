@@ -5,8 +5,9 @@ let number2 = document.querySelector('#number2');
 window.addEventListener('scroll', ()=>{
     let scrolled = window.scrollY ;
 
-    if(scrolled > 0){
-    navbar.style.height = '80px';
+    if(scrolled > 0 ){
+
+        navbar.style.height = '80px';
 
     } else{
   
@@ -59,3 +60,24 @@ let observer = new IntersectionObserver( (entries)=>{
 } );
 
 observer.observe(number1);
+
+
+
+
+// Swiper
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+
+    loop: true,
+  
+    
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+   
+  });
+
