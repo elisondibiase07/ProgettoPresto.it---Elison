@@ -278,12 +278,9 @@ transition: 0.5s;
   
   }
 
-  .icon-star{
-    
-    color: var(--gold);
+  .swiper-button-prev , .swiper-button-next{
+    font-weight: bolder;
   }
-
-
 
 
 
@@ -482,6 +479,11 @@ transition: 0.5s;
 
     #col-numbers{
       margin-top: 5px;
+    }
+
+    .swiper-button-prev , .swiper-button-next{
+      font-weight: bolder;
+      color: var(--black);
     }
   
     }
