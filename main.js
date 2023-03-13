@@ -96,8 +96,8 @@ let reviews = [
 
 
 reviews.forEach((recensione)=> {
-    let div = document.createElement('div')
-    div.classList.add('swiper-slide-second')
+    let div = document.createElement('div');
+    div.classList.add('swiper-slide', 'cust-slide');
     div.innerHTML= `
     <div class="card-review">
     <p class="text-center">${recensione.description}</p>
@@ -145,7 +145,7 @@ for(let i = 1 ; i <= difference ; i++){
 
 // Swiper2
 
-const swiper2 = new Swiper('.swiperSecond', {
+const swiper2 = new Swiper('.swiper', {
     // Optional parameters
 
     loop: true,

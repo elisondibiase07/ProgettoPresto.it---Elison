@@ -291,7 +291,7 @@ transition: 0.5s;
   height: 600px;
 }
 
-.swiper-slide-second{
+.cust-slide{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -309,7 +309,18 @@ transition: 0.5s;
   
 }
 
+/* pagina degli annunci  */
 
+
+.accordion-button , .accordion-item{
+  background-color: var(--gold);
+  color: var(--black);
+}
+
+.accordion-button:not(.collapsed){
+  color: var(--black);
+  background-color: var(--gold);
+}
 
 
 
