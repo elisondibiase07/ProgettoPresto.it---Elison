@@ -285,6 +285,34 @@ transition: 0.5s;
 
 
 
+ /* RECENSIONI */
+
+ .swiperSecond{
+  height: 600px;
+}
+
+.swiper-slide-second{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 250px;
+   color: var(--gold);
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  border: 2px solid var(--gold);
+   flex-direction: column;
+
+  
+}
+
+
+
+
+
 
 
 
