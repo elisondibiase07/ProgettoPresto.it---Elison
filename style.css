@@ -203,7 +203,7 @@ transition: 0.5s;
 
 /* Swiper */
 
-.swiper{
+.swiper1{
   height: 600px;
 }
 
@@ -267,7 +267,7 @@ transition: 0.5s;
   
 }
 
-.swiper-slide{
+.custom-slide1{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -287,7 +287,7 @@ transition: 0.5s;
 
  /* RECENSIONI */
 
- .swiperSecond{
+ .swiper2{
   height: 600px;
 }
 
@@ -321,6 +321,29 @@ transition: 0.5s;
   color: var(--black);
   background-color: var(--gold);
 }
+
+
+/* cards annunci */
+
+.card-annunci{
+  height: 260px;
+  width: 260px;
+  border-radius: 20px;
+  border: 2px dashed var(--gold);
+  box-shadow: 2px 2px 5px var(--gold);
+  display: flex;
+ flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
 
 
 

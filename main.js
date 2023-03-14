@@ -1,3 +1,5 @@
+// NAVBAR
+
 let navbar = document.querySelector('#navbar');
 let number1 = document.querySelector('#number1');
 let number2 = document.querySelector('#number2');
@@ -64,12 +66,13 @@ observer.observe(number1);
 
 
 
-// Swiper
+// Swiper 1
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.swiper1', {
     // Optional parameters
 
     loop: true,
+    
   
     
     // Navigation arrows
@@ -83,9 +86,9 @@ const swiper = new Swiper('.swiper', {
 
 
 
+//   recensioni
 
-
-  let swiperwrapperSecond = document.querySelector('.swiper-wrapperSecond');
+  let swiperwrapperSecond = document.querySelector('.swiper-wrapper');
 
 
 let reviews = [
@@ -123,7 +126,7 @@ stars.forEach((star , index)=> {
 for(let i = 1 ; i <= reviews[index].rank ; i++){
 
 let icon = document.createElement('i') ;
-icon.classList.add('fa-solid`, `fa-star');
+icon.classList.add(`fa-solid ` , ` fa-star`);
 star.appendChild(icon);
 
 }
@@ -134,7 +137,7 @@ for(let i = 1 ; i <= difference ; i++){
 
     let icon = document.createElement('i') ;
 
-    icon.classList.add('fa-regular`, `fa-star');
+    icon.classList.add(`fa-solid ` , ` fa-star`);
     star.appendChild(icon);
     
     }
@@ -145,7 +148,7 @@ for(let i = 1 ; i <= difference ; i++){
 
 // Swiper2
 
-const swiper2 = new Swiper('.swiper', {
+const swiper2 = new Swiper('.swiper2', {
     // Optional parameters
 
     loop: true,
@@ -164,8 +167,8 @@ const swiper2 = new Swiper('.swiper', {
     
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next2',
+      prevEl: '.swiper-button-prev2',
     },
   
    
