@@ -29,10 +29,15 @@ function createInterval(n , el , time){
         counter++
         el.innerHTML = counter;
     } else{
-
+        
         console.log('Adesso mi fermo');
         clearInterval(interval) ;
     }
+        let reviews = [
+            {user : `Elison `, description : `Bellissimo ` , rank : 5},
+            {user : `Debora `, description : `Non male ` , rank : 3},
+            {user : `Serena `, description : `Pessimo ` , rank : 1},
+        ]
     
     }, time);
 
@@ -40,7 +45,7 @@ function createInterval(n , el , time){
         confirm = true ;
 
     }, 000);
-
+    
 }
 
 
@@ -72,6 +77,18 @@ const swiper = new Swiper('.swiper1', {
     // Optional parameters
 
     loop: true,
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+   
+    },
     
   
     
@@ -91,11 +108,6 @@ const swiper = new Swiper('.swiper1', {
   let swiperwrapperSecond = document.querySelector('.swiper-wrapper');
 
 
-let reviews = [
-    {user : `Elison `, description : `Bellissimo ` , rank : 5},
-    {user : `Debora `, description : `Non male ` , rank : 3},
-    {user : `Serena `, description : `Pessimo ` , rank : 1},
-]
 
 
 reviews.forEach((recensione)=> {
@@ -148,28 +160,28 @@ for(let i = 1 ; i <= difference ; i++){
 
 // Swiper2
 
-const swiper2 = new Swiper('.swiper2', {
+// const swiper2 = new Swiper('.swiper2', {
     // Optional parameters
 
-    loop: true,
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
+    // loop: true,
+    // effect: "coverflow",
+    // grabCursor: true,
+    // centeredSlides: true,
+    // slidesPerView: "auto",
+    // coverflowEffect: {
+    //   rotate: 50,
+    //   stretch: 0,
+    //   depth: 100,
+    //   modifier: 1,
+    //   slideShadows: true,
    
-    },
+    // },
     
     // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next2',
-      prevEl: '.swiper-button-prev2',
-    },
+//     navigation: {
+//       nextEl: '.swiper-button-next2',
+//       prevEl: '.swiper-button-prev2',
+//     },
   
    
-  });
+//   });

@@ -1,6 +1,9 @@
 
 fetch('./annunci.json').then((response)=> response.json()).then((data) => {
 
+    data.sort((a,b) => a.price - b.price);
+
+
     let radioWrapper = document.querySelector('#radioWrapper');
     let wrapper = document.querySelector('#wrapper-cards');
 
@@ -63,10 +66,10 @@ fetch('./annunci.json').then((response)=> response.json()).then((data) => {
         let div = document.createElement('div');
         div.classList.add('card-annunci');
         div.innerHTML = `
+        <img src = " ${annuncio.img}" alt ="immagine piatto" class = img-fluid img-card">
         <p class="h3 text-center">${words(annuncio.name)}</p>
         <p class="h4 text-center">${annuncio.category}</p>
         <p class="lead text-center">${annuncio.price} €</p>
-        <img src="${annuncio.img}" alt="immagine piatti">
         
                 
         `;
@@ -87,22 +90,72 @@ fetch('./annunci.json').then((response)=> response.json()).then((data) => {
         if(categoria != 'All'){
             let filter = data.filter((annuncio) => annuncio.category == categoria) ;
             showCards(filter);
+            console.log(categoria);
 
         } else{
             showCards(data);
         }
-    };
+    }
 
        
 
-    let radioButton = document.querySelectorAll('form-check-input');
+    let radioButton = document.querySelectorAll('.form-check-input');
 
         radioButton.forEach((button)=>{
-        button.addEventListener('click', ( )=>{
+        button.addEventListener('click', ()=>{
 
             filterCategory(button.id);
 
         })
     });
+
+
+    let priceInput = document.querySelector('#priceInput');
+    let priceValue = document.querySelector('#priceValue') ;
+
+    function setPrice(){
+        let price = data.map((annuncio)=> annuncio.price);
+        price.sort((a,b)=> a -b);
+        let maxPrice = Math.ceil(price.pop());
+        priceInput.max = maxPrice;
+        priceInput.value = maxPrice;
+        priceValue.value = maxPrice;
+        priceValue.innerHTML = maxPrice;
+    }
+
+    setPrice();
+
+    function filterPrice(){
+
+        let filter = data.filter((annuncio)=> +annuncio.price <= priceInput.value);
+        showCards(filter);
+    }
+
+
+   priceInput.addEventListener('input',() => {
+    priceValue.innerHTML = priceInput.value;
+    filterPrice();
+   });
+
+
+   let wordInput = document.querySelector('#wordInput');
+
+   function filterWord(parola){
+    let filter = data.filter((annuncio)=> annuncio.name.toLowerCase().includes(parola.toLowerCase()));
+    showCards(filter);
+   }
+
+   wordInput.addEventListener('input',() => {
+    filterWord(wordInput.value);
+   })
+
+
+
+
+
+
+
+
+
 
 });
