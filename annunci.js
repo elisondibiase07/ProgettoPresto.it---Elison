@@ -12,16 +12,17 @@ fetch('./annunci.json').then((response)=> response.json()).then((data) => {
      let categories = data.map((annuncio) => annuncio.category);
     
 
-    let categoriaUnica = [] ;
+    // let categoriaUnica = [] ;
 
-    categories.forEach((category)=> {
+    // categories.forEach((category)=> {
 
-        if( !categoriaUnica.includes(category)){
+    //     if( !categoriaUnica.includes(category)){
 
-            categoriaUnica.push(category);
-        }
-    });
-        let categoriaUnic = categoriaUnica.sort(); 
+    //         categoriaUnica.push(category);
+    //     }
+    // });
+    
+        let categoriaUnica = Array.from(new Set(categories)); 
 
         categoriaUnica.forEach((category)=>{
     
@@ -36,13 +37,9 @@ fetch('./annunci.json').then((response)=> response.json()).then((data) => {
     
     
             radioWrapper.appendChild(div);
-        })
+        });
     
-    console.log(categoriaUnica);
-
-
-
-
+    // console.log(categoriaUnica);
 
 }
 
@@ -83,28 +80,34 @@ fetch('./annunci.json').then((response)=> response.json()).then((data) => {
     showCards(data);
 
 
+    let radioButtons = document.querySelectorAll('.form-check-input');
 
-    function filterCategory(categoria){
+    function filterCategory(array){
         // qui devo ottenere un nuovo array che soddisfi delle condizioni 
 
+        let categoria = Array.from( radioButtons).find( (bottone) => bottone.checked).id ;
+
+        // let arrayNodeList = Array.from(radioButtons);
+        // let button = arrayNodeList.find((bottone)=> bottone.checked);
+        // let categoria = button.id;
+
         if(categoria != 'All'){
-            let filter = data.filter((annuncio) => annuncio.category == categoria) ;
-            showCards(filter);
-            console.log(categoria);
+            let filtered = array.filter((annuncio) => annuncio.category == categoria) ;
+            return filtered;
 
         } else{
-            showCards(data);
+            return array;
         }
     }
 
        
-
-    let radioButton = document.querySelectorAll('.form-check-input');
-
-        radioButton.forEach((button)=>{
+        radioButtons.forEach((button)=>{
         button.addEventListener('click', ()=>{
 
-            filterCategory(button.id);
+            setPrice(filterCategory(data));
+
+            globalFilter();
+            
 
         })
     });
@@ -113,49 +116,47 @@ fetch('./annunci.json').then((response)=> response.json()).then((data) => {
     let priceInput = document.querySelector('#priceInput');
     let priceValue = document.querySelector('#priceValue') ;
 
-    function setPrice(){
-        let price = data.map((annuncio)=> annuncio.price);
-        price.sort((a,b)=> a -b);
-        let maxPrice = Math.ceil(price.pop());
+    function setPrice(array){
+        let prices = array.map((annuncio)=> annuncio.price);
+        prices.sort((a, b)=> a - b);
+        let maxPrice = Math.ceil(prices.pop());
         priceInput.max = maxPrice;
         priceInput.value = maxPrice;
-        priceValue.value = maxPrice;
         priceValue.innerHTML = maxPrice;
     }
 
-    setPrice();
+    setPrice(filterCategory(data));
 
-    function filterPrice(){
 
-        let filter = data.filter((annuncio)=> +annuncio.price <= priceInput.value);
-        showCards(filter);
+    function filterByPrice(array){
+        let filtered = array.filter( (annuncio)=> +annuncio.price <= priceInput.value );
+        return filtered;
     }
 
-
-   priceInput.addEventListener('input',() => {
-    priceValue.innerHTML = priceInput.value;
-    filterPrice();
-   });
-
-
-   let wordInput = document.querySelector('#wordInput');
-
-   function filterWord(parola){
-    let filter = data.filter((annuncio)=> annuncio.name.toLowerCase().includes(parola.toLowerCase()));
-    showCards(filter);
-   }
-
-   wordInput.addEventListener('input',() => {
-    filterWord(wordInput.value);
-   })
+    priceInput.addEventListener( 'input' , ()=>{
+        priceValue.innerHTML = priceInput.value;
+        globalFilter();
+    } );
 
 
+    let wordInput = document.querySelector('#wordInput');
+    function filterByWord(array){
+        let filtered = array.filter( (annuncio)=> annuncio.name.toLowerCase().includes(wordInput.value.toLowerCase()) );
+        return filtered;
+    }
 
+    wordInput.addEventListener('input', ()=>{
+        globalFilter();
+    })
 
+   
+    function globalFilter(){
+        let filteredCategory = filterCategory(data); 
+        let filteredByPrice = filterByPrice(filteredCategory);
+        let filteredByWord = filterByWord(filteredByPrice);
 
-
-
-
+        showCards(filteredByWord);
+    }
 
 
 });
