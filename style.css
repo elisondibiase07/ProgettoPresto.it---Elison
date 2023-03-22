@@ -337,9 +337,46 @@ transition: 0.5s;
   justify-content: center;
 }
 
+/* articoli */
 
+.box-circle{
+  height: 300px;
+  width: 300px;
+  border: 10px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 
+.plus{
+  height: 80px;
+  width: 80px;
+  border: 2px solid var(--vanilla);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 3;
+  background-color: var(--brown);
+  cursor: pointer;
+  transition: 0.3s;
+}
 
+.moved{
+  height: 80px;
+  width: 80px;
+  transition: 0.5s;
+  border: 2px solid var(--vanilla);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  background-color: red;
+  background-size: 50px;
+  background-position: center;
+}
 
 
 
