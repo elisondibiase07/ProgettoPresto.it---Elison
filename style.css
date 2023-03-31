@@ -155,10 +155,10 @@ body{
   display: flex;
   align-items: center;
 }
-.img-card{
+.img-card1{
   border-radius: 100%;
-  width: 500px;
-  height: 300px;
+  width: 350px;
+  height: 200px;
 }
 
 /* numeri incrementali */
@@ -326,15 +326,36 @@ transition: 0.5s;
 /* cards annunci */
 
 .card-annunci{
-  height: 260px;
-  width: 260px;
+  height: 280px;
+  width: 280px;
   border-radius: 20px;
-  border: 2px dashed var(--gold);
+  border: 2px solid var(--gold);
   box-shadow: 2px 2px 5px var(--gold);
   display: flex;
- flex-direction: column;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 10px 10px;
+  background-color: var(--brown);
+  
+}
+
+#container-annunci{
+  background-image: url(media/sfondo-moderno-vuoto-per-il-menu-ristorante-posate-d-oro-surreali-originali-su-fondo-di-carta-immagine-verticale-209137700.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+
+.img-card{
+  height: 200px;
+  width: 200px;
+  margin-top: 5px;
+  transition: 2s;
+}
+
+.img-card:hover{
+  transform: scale(1.4) ;
 }
 
 /* articoli */
@@ -481,6 +502,14 @@ transition: 0.5s;
   margin-top: 150px;
  }
 
+ .card-annunci{
+  margin: 20px;
+ }
+
+ #container-annunci{
+  margin-bottom: 100px;
+  /* padding: 150px; */
+ }
 
   }
   
@@ -584,6 +613,16 @@ transition: 0.5s;
       font-weight: bolder;
       color: var(--black);
     }
+
+    .accordion{
+      margin-bottom: 20px;
+    }
+    #container-annunci{
+      margin-top: 200px;
+      
+    }
+
+    
   
     }
     

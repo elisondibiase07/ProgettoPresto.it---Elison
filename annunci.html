@@ -16,7 +16,7 @@
 
 
   </head>
-  <body>
+  <body class="body-annunci">
 
     <!-- NAVBAR -->
 
@@ -32,21 +32,12 @@
                 <a class="nav-link" aria-current="page" href="./index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./annunci.html">Annunci</a>
+                <a class="nav-link" href="./annunci.html">Menù</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./chisiamo.html">Chi Siamo</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Menu'
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Primi piatti</a></li>
-                  <li><a class="dropdown-item" href="#">Secondi Piatti</a></li>
-                  <li><a class="dropdown-item" href="#">Dessert</a></li>
-                </ul>
-              </li>
+              
             </ul>
           </div>
           <div class="div-btn">
@@ -59,10 +50,10 @@
 <!-- Pagina annunci  -->
 
 
-      <h1 class="text-center"> PAGINA DEGLI ANNUNCI </h1>
 
-      <section class="container">
-        <div class="row">
+<section class="container-fluid" id="container-annunci" >
+  <div class="row">
+          <h1 class="text-center h1-annunci display-2 my-5 text-black "> Il Nostro Menù </h1>
             <div class="col-12 col-md-3">
             
                 <div class="accordion sticky-top" id="accordionExample">
@@ -123,6 +114,97 @@
             </div>
         </div>
       </section>
+
+
+
+      <!-- FOOTER -->
+      
+
+      <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #3b5998;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <!-- Twitter -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #55acee;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-twitter"></i
+            ></a>
+      
+            <!-- Google -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #dd4b39;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #ac2bac;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #0082ca;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <!-- Github -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #333333;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+      
+        <footer class="text-center text-white" style="background-color: #0f0f0f;">
+          <!-- Grid container -->
+          <div class="container p-4">
+            <!-- Section: Iframe -->
+            <section class="">
+              <div class="row d-flex justify-content-center">
+                <div class="col-lg-6">
+                  <div class="ratio ratio-16x9">
+                    <iframe
+                      class="shadow-1-strong rounded"
+                      src="https://www.youtube.com/embed/bFCywHMczMk"
+                      title="YouTube video"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Section: Iframe -->
+          </div>
+          
+        
+          </footer>
+      </footer>
 
 
 

@@ -79,6 +79,11 @@ const swiper = new Swiper('.swiper1', {
     loop: true,
     effect: "coverflow",
     grabCursor: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+        
+      },
     centeredSlides: true,
     slidesPerView: "auto",
     coverflowEffect: {
@@ -87,6 +92,8 @@ const swiper = new Swiper('.swiper1', {
       depth: 100,
       modifier: 1,
       slideShadows: true,
+      
+    
    
     },
     
@@ -97,6 +104,7 @@ const swiper = new Swiper('.swiper1', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+   
 
    
   });

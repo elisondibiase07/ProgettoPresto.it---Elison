@@ -82,7 +82,7 @@ fetch('./annunci.json').then((response)=> response.json()).then((data) => {
         let div = document.createElement('div');
         div.classList.add('card-annunci');
         div.innerHTML = `
-        <img src = " ${annuncio.img}" alt ="immagine piatto" class = img-fluid img-card">
+        <img src = " ${annuncio.img}" alt ="immagine piatto" class = "img-fluid img-card">
         <p class="h3 text-center">${words(annuncio.name)}</p>
         <p class="h4 text-center">${annuncio.category}</p>
         <p class="lead text-center">${annuncio.price} €</p>
