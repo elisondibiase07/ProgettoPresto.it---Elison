@@ -147,18 +147,29 @@ body{
 
   /* Section Card */
 
+  .col-card{
+    height: 10px;
+  }
+
 .card{
  
   border-radius: 100%;
   background-color: rgba(0, 0, 0, 0.692);
-  top: -50px;
+  top: -150px;
   display: flex;
   align-items: center;
+  /* display: inline-block;
+  margin: 0 0.5rem;  */
+  animation-duration: 10s;
+  
 }
 .img-card1{
   border-radius: 100%;
   width: 350px;
   height: 200px;
+  /* display: inline-block; */
+  margin: 0 0.5rem;
+  animation-duration: 10s;
 }
 
 /* numeri incrementali */
@@ -444,7 +455,7 @@ transition: 0.5s;
     .h1-header{
       
         font-size: 50px; 
-        margin-top: 500px;  
+        /* margin-top: 500px;   */
     }
      
     .div-btn-header1{
@@ -465,6 +476,10 @@ transition: 0.5s;
     height: 50px;
     width: 200px;
   
+    }
+
+    .col-card{
+      height: 200px;
     }
 
     .card{
